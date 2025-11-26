@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-pushd
+pushd $(pwd)
 cd wazuh
 if [ ! -d ./config/wazuh_indexer_ssl_certs ]; then
 	docker compose -f generate-indexer-certs.yml run --rm generator
