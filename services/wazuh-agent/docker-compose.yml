@@ -8,6 +8,8 @@ services:
     networks: [wazuh]
     volumes:
       - ./config/wazuh-agent-conf:/wazuh-config-mount/etc/ossec.conf
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
 networks:
   wazuh:
     external: true

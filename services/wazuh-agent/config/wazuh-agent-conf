@@ -82,6 +82,10 @@
     </synchronization>
   </wodle>
 
+  <wodle name="docker-listener">
+    <disabled>no</disabled>
+  </wodle>
+
   <sca>
     <enabled>yes</enabled>
     <scan_on_start>yes</scan_on_start>
