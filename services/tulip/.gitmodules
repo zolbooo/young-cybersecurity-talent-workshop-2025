@@ -1,0 +1,3 @@
+[submodule "mcp"]
+	path = mcp
+	url = https://github.com/icc25-asia/tulip-mcp.git
