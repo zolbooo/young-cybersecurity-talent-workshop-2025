@@ -28,7 +28,7 @@ services:
       - wazuh_logs:/var/ossec/logs
       - wazuh_queue:/var/ossec/queue
       - wazuh_var_multigroups:/var/ossec/var/multigroups
-      - wazuh_integrations:/var/ossec/integrations
+      - ./config/wazuh_integrations:/var/ossec/integrations
       - wazuh_active_response:/var/ossec/active-response/bin
       - wazuh_agentless:/var/ossec/agentless
       - wazuh_wodles:/var/ossec/wodles
