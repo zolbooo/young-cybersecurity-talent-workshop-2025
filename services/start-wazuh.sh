@@ -1,13 +1,13 @@
 #!/bin/bash -e
 
-cd wazuh-docker/single-node
+pushd
+cd wazuh
 if [ ! -d ./config/wazuh_indexer_ssl_certs ]; then
 	docker compose -f generate-indexer-certs.yml run --rm generator
 fi
-
 docker compose up -d
 
-cd ../wazuh-agent
+popd
 if grep '<WAZUH_MANAGER_IP>' docker-compose.yml; then
 		sed -i "s/<WAZUH_MANAGER_IP>/host.docker.internal/g" docker-compose.yml
 		yq -y -i '
