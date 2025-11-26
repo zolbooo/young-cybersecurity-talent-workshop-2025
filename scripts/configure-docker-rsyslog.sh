@@ -4,6 +4,9 @@ if whoami | grep -qv root; then
   exit 1
 fi
 
+if [ ! -d /etc/docker ]; then
+  mkdir -p /etc/docker
+fi
 if [ ! -f /etc/docker/daemon.json ]; then
     cat << EOF > /etc/docker/daemon.json
 {
