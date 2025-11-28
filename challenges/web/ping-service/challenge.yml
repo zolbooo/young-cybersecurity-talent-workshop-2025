@@ -10,6 +10,8 @@ description: |
 difficulty: easy
 value: 50
 
+connection_info: http://flamebox.local:13300
+
 flags:
   - type: static
     content: flag{command_injection_is_bad_mkay}
