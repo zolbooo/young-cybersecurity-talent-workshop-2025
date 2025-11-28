@@ -1,0 +1,3 @@
+[submodule "services/ctfd"]
+	path = services/ctfd
+	url = https://github.com/CTFd/CTFd.git
