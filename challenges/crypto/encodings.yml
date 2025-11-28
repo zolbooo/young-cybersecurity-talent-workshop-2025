@@ -1,0 +1,23 @@
+name: Encodings
+author: "[flame](https://github.com/zolbooo)"
+category: crypto
+
+description: |
+  Texts are encoded using different encoding schemes. Decode them to find the hidden flags.
+
+  ```
+  2WGHYSMTWBZSp
+  hWcsaQA4H2TWi7ykde7
+  DDQGlEc!OKA90GDE\I
+  K}&;lGd>:kDiR
+  ```
+
+difficulty: easy
+value: 10
+
+logic: all
+flags:
+  - v3ry_e@sy
+  - n1c3g0g0g00000
+  - n3v3rm1nds0pr0
+  - what1sth1s
