@@ -17,7 +17,7 @@ description: |
 
   Example: The status code message for 200 is "OK".
 difficulty: easy
-value: 50
+value: 10
 
 logic: all
 flags:
