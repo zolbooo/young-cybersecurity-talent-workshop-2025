@@ -1,0 +1,12 @@
+name: Hello Crypto
+author: "[flame](https://github.com/zolbooo)"
+category: crypto
+
+description: |
+  Please decrypto: `uryyb_pelcgb4660`
+difficulty: easy
+value: 10
+
+logic: all
+flags:
+  - hello_crypto1337
