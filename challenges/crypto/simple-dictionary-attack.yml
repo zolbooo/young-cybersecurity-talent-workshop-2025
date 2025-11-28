@@ -1,0 +1,24 @@
+name: Simple Dictionary Attack
+author: "[flame](https://github.com/zolbooo)"
+category: crypto
+
+description: |
+  This is a SHA3-512: `f37fe596f036ef67eec415d9e277879c90b22c93dc6709edf1fba2900b0167971f74f4c79a73d549bb31c8345a00a5fb08aec48d055293dca6c9e92fce56a930`
+  **Be careful as you have only one attempt!**
+
+  Which phrase was used to create this hash? List of possible phrases:
+  - hello_world
+  - password123
+  - w0w_very_c00l_hash
+  - future_is_bright_with_sHA3
+  - w0w_such_secure_much_hash
+  - crypto_is_fun
+  - sha3_is_awesome
+
+attempts: 1
+difficulty: easy
+value: 10
+
+logic: all
+flags:
+  - w0w_such_secure_much_hash
