@@ -7,6 +7,5 @@ description: |
 difficulty: easy
 value: 10
 
-logic: all
 flags:
   - hello_crypto1337

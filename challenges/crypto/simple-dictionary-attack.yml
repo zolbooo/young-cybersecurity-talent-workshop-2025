@@ -19,6 +19,5 @@ attempts: 1
 difficulty: easy
 value: 10
 
-logic: all
 flags:
   - w0w_such_secure_much_hash
