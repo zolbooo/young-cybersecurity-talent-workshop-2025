@@ -1,0 +1,16 @@
+name: Query me
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  Play around with SQL in the exquisite playground! You can read only one row at the time tho…
+
+  Flag is somewhere in secrets database :)
+
+difficulty: easy
+value: 50
+
+connection_info: http://flamebox.local:13302
+
+flags:
+  - flag{n1c3_SQL_qu3rying_capabilities}

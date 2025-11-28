@@ -1,0 +1,149 @@
+:root {
+    --bg-color: #0a0a12;
+    --console-bg: #111;
+    --neon-green: #39ff14;
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--neon-pink);
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.console-window {
+    background-color: var(--console-bg);
+    border: 2px solid var(--neon-green);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--neon-green), inset 0 0 20px rgba(57, 255, 20, 0.2);
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.console-header {
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.console-body {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 1.2rem;
+}
+
+.output-area {
+    margin-bottom: 10px;
+}
+
+.line {
+    margin-bottom: 5px;
+    color: var(--neon-green);
+}
+
+.error {
+    color: #ff5f56;
+}
+
+.result-row {
+    color: var(--neon-blue);
+    margin-left: 20px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: var(--neon-pink);
+    margin-right: 10px;
+}
+
+#query-input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    width: 100%;
+    outline: none;
+}
+
+.neon-button {
+    background-color: transparent;
+    border: 2px solid var(--neon-pink);
+    color: var(--neon-pink);
+    padding: 10px 30px;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--neon-pink);
+    box-shadow: 0 0 5px var(--neon-pink), inset 0 0 5px var(--neon-pink);
+    transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+    background-color: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 20px var(--neon-pink), inset 0 0 10px var(--neon-pink);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -9,6 +9,10 @@ services:
     build: never-trust-the-client
     ports:
       - "13301:5000"
+  query-me:
+    build: query-me
+    ports:
+      - "13302:5000"
 networks:
   wazuh:
     name: wazuh-network

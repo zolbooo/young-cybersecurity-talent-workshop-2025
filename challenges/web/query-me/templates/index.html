@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon SQL Console</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="neon-text">SQL QUERY CONSOLE</h1>
+            <p class="subtitle">ACCESS LEVEL: READ-ONLY</p>
+        </header>
+
+        <main>
+            <div class="console-window">
+                <div class="console-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="console-body">
+                    <div class="output-area" id="output">
+                        <div class="line">System initialized...</div>
+                        <div class="line">Connected to SQLite database...</div>
+                        <div class="line">Waiting for input...</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">sqlite&gt;</span>
+                        <input type="text" id="query-input" placeholder="SELECT * FROM secrets" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <button id="run-btn" class="neon-button">EXECUTE QUERY</button>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
