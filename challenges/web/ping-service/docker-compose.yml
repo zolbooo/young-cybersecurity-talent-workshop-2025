@@ -1,5 +1,11 @@
 services:
   web:
     build: .
+    networks:
+      - wazuh
     ports:
       - "13300:5000"
+networks:
+  wazuh:
+    name: wazuh-network
+    external: true
