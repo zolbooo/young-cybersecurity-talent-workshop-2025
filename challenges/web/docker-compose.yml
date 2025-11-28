@@ -1,7 +1,6 @@
 services:
   ping-service:
     build: ping-service
-    privileged: true
     networks:
       - wazuh
     ports:
