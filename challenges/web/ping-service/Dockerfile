@@ -10,9 +10,8 @@ RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 WORKDIR /app
-RUN uv python install && \
-	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping && \
+RUN apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y python3 iputils-ping && \
 	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY app.py .
