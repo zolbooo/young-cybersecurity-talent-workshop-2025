@@ -17,6 +17,8 @@ COPY templates/ templates/
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt
 RUN uv python install
 
+RUN useradd -m appuser
+USER appuser
 
 EXPOSE 5000
 CMD ["uv", "run", "app.py"]
