@@ -20,7 +20,7 @@ COPY templates/ templates/
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt && chmod 111 /app/flag.txt
 
 RUN sed -i '$d' /var/ossec/etc/ossec.conf && \
-	echo << EOF >> /var/ossec/etc/ossec.conf
+	cat << EOF >> /var/ossec/etc/ossec.conf
 	<localfile>
 		<log_format>audit</log_format>
 		<location>/var/log/audit/audit.log</location>
