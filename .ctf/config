@@ -1,0 +1,6 @@
+[config]
+url = http://flamebox.local:8000
+access_token = ctfd_ab9ea85d8eaae8556170b6458bcf86490b7200e4aef791bcea69fd096ec53c50
+
+[challenges]
+
