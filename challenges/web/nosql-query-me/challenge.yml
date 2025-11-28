@@ -1,0 +1,15 @@
+name: NoSQL query me
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  Play around with NoSQL (MongoDB) in the exquisite playground!
+  You need to guess the flag though…
+
+difficulty: easy
+value: 50
+
+connection_info: http://flamebox.local:13302
+
+flags:
+  - ctf{n0sql_injection_is_fun}

@@ -1,3 +1,5 @@
+include:
+  - nosql-query-me/docker-compose.yml
 services:
   ping-service:
     build: ping-service

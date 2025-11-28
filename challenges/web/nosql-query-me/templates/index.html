@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flag Checker</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        .message { margin-top: 1rem; font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Enter the Flag</h1>
+    <form id="flagForm">
+        <input type="text" id="flagInput" placeholder="flag{...}" required>
+        <input type="submit" value="Check">
+    </form>
+    <div id="message" class="message"></div>
+
+    <script>
+        document.getElementById('flagForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const flag = document.getElementById('flagInput').value;
+            const messageDiv = document.getElementById('message');
+
+            try {
+                const response = await fetch('/check_flag', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ flag: flag })
+                });
+
+                const data = await response.json();
+                messageDiv.textContent = data.message;
+
+                if (data.message.includes('Correct')) {
+                    messageDiv.className = 'message success';
+                } else {
+                    messageDiv.className = 'message error';
+                }
+            } catch (error) {
+                messageDiv.textContent = 'Error: ' + error;
+                messageDiv.className = 'message error';
+            }
+        });
+    </script>
+</body>
+</html>
