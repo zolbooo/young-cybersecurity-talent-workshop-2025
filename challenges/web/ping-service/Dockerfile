@@ -1,5 +1,10 @@
 FROM ubuntu:24.04
 
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.1-1_amd64.deb && \
+		dpkg -i wazuh-agent_4.14.1-1_amd64.deb && \
+		rm wazuh-agent_4.14.1-1_amd64.deb
+
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 WORKDIR /app
@@ -10,9 +15,6 @@ COPY templates/ templates/
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt
 RUN uv python install
 
-RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.1-1_amd64.deb && \
-		dpkg -i wazuh-agent_4.14.1-1_amd64.deb && \
-		rm wazuh-agent_4.14.1-1_amd64.deb
 
 EXPOSE 5000
 CMD ["uv", "run", "app.py"]
