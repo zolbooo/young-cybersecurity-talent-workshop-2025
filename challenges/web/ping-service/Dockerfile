@@ -8,6 +8,10 @@ RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_
 		rm wazuh-agent_4.14.1-1_amd64.deb
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
+RUN uv python install && \
+	apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping && \
+	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -15,10 +19,6 @@ COPY app.py .
 COPY templates/ templates/
 
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt
-RUN uv python install && \
-	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping && \
-	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m appuser
 USER appuser
