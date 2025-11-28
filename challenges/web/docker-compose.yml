@@ -1,6 +1,6 @@
 services:
-  web:
-    build: .
+  ping-service:
+    build: ping-service
     networks:
       - wazuh
     ports:
