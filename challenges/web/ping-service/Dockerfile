@@ -15,7 +15,10 @@ COPY app.py .
 COPY templates/ templates/
 
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt
-RUN uv python install
+RUN uv python install && \
+	apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping && \
+	apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m appuser
 USER appuser
