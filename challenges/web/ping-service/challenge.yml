@@ -1,0 +1,15 @@
+name: Ping service
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  I have created a simple web service that allows users to ping a specified IP address or domain name.
+  However, I suspect there might be a command injection in the way the input is handled.
+  Can you find and exploit it to retrieve the flag?
+
+difficulty: easy
+value: 50
+
+flags:
+  - type: static
+    content: flag{command_injection_is_bad_mkay}
