@@ -20,7 +20,16 @@ COPY templates/ templates/
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt
 
 RUN useradd -m appuser
-USER appuser
 
 EXPOSE 5000
-CMD ["uv", "run", "app.py"]
+
+RUN cat << EOF > /entrypoint.sh
+#!/bin/bash
+set -e
+/var/ossec/bin/wazuh-control start
+
+# Drop user privileges and run the app
+su appuser -c "uv run /app/app.py"
+EOF
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
