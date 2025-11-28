@@ -19,14 +19,6 @@ COPY templates/ templates/
 
 RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt && chmod 111 /app/flag.txt
 
-RUN echo "-w /app/flag.txt -p r -k audit-wazuh-r" >> /etc/audit/audit.rules && \
-auditctl -R /etc/audit/audit.rules && auditctl -l
-RUN useradd -m appuser
-RUN APP_UID="$(id -u appuser)" && \
-	echo "-a exit,always -F euid=${APP_UID} -F arch=b64 -S execve -k audit-wazuh-c" >> /etc/audit/audit.rules && \
-	echo "-a exit,always -F euid=${APP_UID} -F arch=b32 -S execve -k audit-wazuh-c" >> /etc/audit/audit.rules && \
-	auditctl -R /etc/audit/audit.rules && auditctl -l
-
 RUN sed -i '$d' /var/ossec/etc/ossec.conf && \
 	echo << EOF >> /var/ossec/etc/ossec.conf
 	<localfile>
@@ -36,11 +28,19 @@ RUN sed -i '$d' /var/ossec/etc/ossec.conf && \
 </ossec_config>
 EOF
 
+RUN useradd -m appuser
 EXPOSE 5000
 
 RUN cat << EOF > /entrypoint.sh
 #!/bin/bash
 set -e
+
+echo "-w /app/flag.txt -p r -k audit-wazuh-r" >> /etc/audit/audit.rules
+APP_UID="$(id -u appuser)"
+echo "-a exit,always -F euid=${APP_UID} -F arch=b64 -S execve -k audit-wazuh-c" >> /etc/audit/audit.rules
+echo "-a exit,always -F euid=${APP_UID} -F arch=b32 -S execve -k audit-wazuh-c" >> /etc/audit/audit.rules
+auditctl -R /etc/audit/audit.rules && auditctl -l
+
 /var/ossec/bin/wazuh-control start
 
 # Drop user privileges and run the app
