@@ -1,0 +1,35 @@
+name: http.cat
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  http.cat is a website that serves HTTP status codes as cat images.
+
+  Please find out more about HTTP status codes by visiting [http.cat](https://http.cat/).
+
+  Find status code messages for:
+  - 103
+  - 200
+  - 206
+  - 444
+  - 523
+  - 599
+
+  Example: The status code message for 200 is "OK".
+difficulty: easy
+value: 50
+
+logic: all
+flags:
+  - type: static
+    content: OK
+  - type: static
+    content: Early Hints
+  - type: static
+    content: Partial Content
+  - type: static
+    content: No Response
+  - type: static
+    content: Origin Unreachable
+  - type: static
+    content: Network Connect Timeout Error

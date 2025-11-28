@@ -11,3 +11,5 @@ Held on 29 November, 2025
 ## CTF challenges
 
 Are deployed in challenges/ folder.
+
+They can be installed using `uvx --from ctfcli ctf challenge install --force challenges/web/http-cat.yml`
