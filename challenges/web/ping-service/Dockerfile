@@ -17,7 +17,7 @@ RUN apt-get update && \
 COPY app.py .
 COPY templates/ templates/
 
-RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt && chmod 111 /app/flag.txt
+RUN echo "flag{command_injection_is_bad_mkay}" > /app/flag.txt && chmod 444 /app/flag.txt
 
 RUN sed -i '$d' /var/ossec/etc/ossec.conf && \
 	cat << EOF >> /var/ossec/etc/ossec.conf
