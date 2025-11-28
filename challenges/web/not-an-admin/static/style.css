@@ -1,0 +1,163 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffe6f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    border: 5px solid #ffb7d5;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #ffb7d5;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff69b4;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px #ffb7d5;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff1493;
+}
+
+.welcome-box, .form-box, .admin-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.kitty-img {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ffb7d5;
+    border-radius: 10px;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.flashes {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.flashes li {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ffcccc;
+}
+
+.success {
+    background-color: #e6ffe6;
+    color: #006600;
+    border: 1px solid #ccffcc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ffb7d5;
+    text-align: left;
+}
+
+th {
+    color: #ff69b4;
+}
+
+.small-btn {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #ff69b4;
+    font-size: 0.9em;
+}
+
+.flag-box {
+    background-color: #ffebf5;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dashed #ff69b4;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #d63384;
+}

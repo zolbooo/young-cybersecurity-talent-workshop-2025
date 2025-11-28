@@ -1,0 +1,16 @@
+name: Not an admin
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  Hello, kitty! Welcome to my website. Flag is in the admin panel located at /admin. Also, admin can manage users at /admin/users.
+
+  Can you find a way to access the admin panel without being an admin?
+
+difficulty: easy
+value: 50
+
+connection_info: http://flamebox.local:13303
+
+flags:
+  - flag{cUt3_p1nk_fl4g_f0r_y0u}

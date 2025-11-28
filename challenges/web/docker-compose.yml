@@ -15,6 +15,10 @@ services:
     build: query-me
     ports:
       - "13302:5000"
+  not-an-admin:
+    build: not-an-admin
+    ports:
+      - "13303:5000"
 networks:
   wazuh:
     name: wazuh-network
