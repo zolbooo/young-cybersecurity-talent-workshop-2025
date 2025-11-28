@@ -1,0 +1,23 @@
+name: "Stack Leak"
+author: "Admin"
+category: "pwn"
+description: |
+  The flag is loaded into memory, but how can you read it?
+  
+  Look carefully at the stack layout...
+  
+  `nc <HOST> 9002`
+value: 50
+type: "standard"
+flags:
+  - "FLAG{n0_null_n0_str1ng}"
+files:
+  - "chall2.c"
+hints:
+  - content: "The flag buffer is adjacent to your input buffer on the stack"
+    cost: 5
+  - content: "read() takes 64 bytes but the buffer is only 48 bytes..."
+    cost: 10
+state: "visible"
+connection_info: "nc <HOST> 9002"
+

@@ -1,0 +1,25 @@
+name: "Shellcoder"
+author: "Admin"
+category: "pwn"
+description: |
+  Time to prove your shellcoding skills!
+  
+  The stack is executable and you get a free address leak. Can you pop a shell?
+  
+  `nc <HOST> 9003`
+value: 60
+type: "standard"
+flags:
+  - "flag{sh3llc0d3_m4st3r_0x1337}"
+files:
+  - "chall3.c"
+hints:
+  - content: "The program leaks the buffer address for you"
+    cost: 5
+  - content: "Offset to return address: 64 bytes buffer + 8 bytes saved RBP = 72 bytes"
+    cost: 10
+  - content: "Payload format: [shellcode][padding][leaked_address]"
+    cost: 20
+state: "visible"
+connection_info: "nc <HOST> 9003"
+

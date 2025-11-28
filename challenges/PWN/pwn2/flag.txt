@@ -1,0 +1,1 @@
+FLAG{n0_null_n0_str1ng}

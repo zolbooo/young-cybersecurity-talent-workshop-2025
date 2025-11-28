@@ -1,0 +1,25 @@
+name: "ROP Master"
+author: "Admin"
+category: "pwn"
+description: |
+  No more executable stack! Time to learn Return Oriented Programming (ROP).
+  
+  The binary has useful gadgets and a "/bin/sh" string. Can you chain them together?
+  
+  `nc <HOST> 9004`
+value: 70
+type: "standard"
+flags:
+  - "flag{r0p_ch41n5_4r3_p0w3rful_7ech}"
+files:
+  - "chall4.c"
+hints:
+  - content: "Look for 'pop rdi; ret' gadget in the binary"
+    cost: 5
+  - content: "There's a global '/bin/sh' string you can use"
+    cost: 10
+  - content: "Chain: pop_rdi_ret -> binsh_addr -> system@plt"
+    cost: 20
+state: "visible"
+connection_info: "nc <HOST> 9004"
+
