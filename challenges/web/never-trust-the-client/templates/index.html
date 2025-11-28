@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Cat Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Purrfect Cat Site 🐱</h1>
+
+        {% if username %}
+            <div class="welcome-message">
+                <h2>Hello, {{ username }}!</h2>
+								{% if username == "admin" %}
+								<p><strong>Flag: flag{N3v3r_Tru5t_Th3_Cl13nt!}</strong></p>
+								{% endif %}
+                <p>Here is your daily dose of cats:</p>
+                <img src="https://placecats.com/400/300" alt="A cute kitten">
+                <br>
+                <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+            </div>
+        {% else %}
+            <div class="login-form">
+                <p>Please enter your name to see the cats:</p>
+                <form method="POST">
+                    <input type="text" name="username" placeholder="Enter your username" required>
+                    <input type="password" name="password" placeholder="Enter password" required style="margin-top: 10px;">
+                    <button type="submit" class="btn">Enter</button>
+                </form>
+                {% if error %}
+                    <p style="color: red; margin-top: 10px;">{{ error }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="cat-decorations">
+            <span class="cat-emoji">🐈</span>
+            <span class="cat-emoji">🐾</span>
+            <span class="cat-emoji">🧶</span>
+        </div>
+    </div>
+</body>
+</html>

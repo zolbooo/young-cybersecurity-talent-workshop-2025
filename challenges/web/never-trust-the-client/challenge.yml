@@ -1,0 +1,16 @@
+name: Never trust the client
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  Have a daily dose of cats! Default password is "ilovecats".
+
+  Your goal is to become an admin and get the flag.
+
+difficulty: easy
+value: 50
+
+connection_info: http://flamebox.local:13301
+
+flags:
+  - flag{N3v3r_Tru5t_Th3_Cl13nt!}

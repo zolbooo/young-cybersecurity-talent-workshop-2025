@@ -5,6 +5,10 @@ services:
       - wazuh
     ports:
       - "13300:5000"
+  never-trust-the-client:
+    build: never-trust-the-client
+    ports:
+      - "13301:5000"
 networks:
   wazuh:
     name: wazuh-network
