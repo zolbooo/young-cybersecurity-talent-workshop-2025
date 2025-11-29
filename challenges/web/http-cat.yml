@@ -30,6 +30,6 @@ flags:
   - type: static
     content: No Response
   - type: static
-    content: Origin Unreachable
+    content: Origin Is Unreachable
   - type: static
     content: Network Connect Timeout Error
