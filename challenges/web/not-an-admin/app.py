@@ -10,7 +10,7 @@ import functools
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_hello_kitty_key'
-DATABASE = 'database.db'
+DATABASE = 'db/database.db'
 FLAG = 'flag{cUt3_p1nk_fl4g_f0r_y0u}'
 
 def get_db():

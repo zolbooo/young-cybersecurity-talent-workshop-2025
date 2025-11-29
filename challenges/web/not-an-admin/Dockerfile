@@ -11,9 +11,10 @@ COPY app.py ./
 COPY templates/ templates/
 COPY static/ static/
 
-RUN useradd -m appuser
+RUN useradd -m appuser && mkdir /app/db && \
+		chown -R appuser:appuser /app/db
 USER appuser
-COPY --chown=appuser --chmod=600 database.db ./
+COPY --chown=appuser --chmod=600 database.db ./db/
 
 EXPOSE 5000
 CMD ["uv", "run", "app.py"]
