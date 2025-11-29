@@ -3,7 +3,15 @@
 #   "flask"
 # ]
 # ///
-from flask import Flask, render_template, request, session, redirect, url_for, make_response
+from flask import (
+    Flask,
+    render_template,
+    request,
+    session,
+    redirect,
+    url_for,
+    make_response,
+)
 import hashlib
 
 app = Flask(__name__)
@@ -33,7 +41,7 @@ def index():
         else:
             error = "Please enter both username and password."
 
-    username = request.cookies.get('username')
+    username = request.cookies.get("username")
     return render_template("index.html", username=username, error=error)
 
 
@@ -45,4 +53,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, host="0.0.0.0", port=5000)
