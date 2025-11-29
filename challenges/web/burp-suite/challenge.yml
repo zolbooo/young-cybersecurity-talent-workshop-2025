@@ -1,0 +1,19 @@
+name: http.cat
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  Just download Burp Suite Community Edition from here.
+
+  If there is not suitable version for your OS, go to https://portswigger.net/burp/releases/professional-community-2025-10-6
+
+  Flag is the version of Burp Suite displayed on the About page.
+difficulty: easy
+value: 10
+
+files:
+  - dist/burpsuite_community_macos_arm64_v2025_10_6.dmg
+  - dist/burpsuite_community_windows-x64_v2025_10_6.exe
+
+flags:
+  - 2025.10.6 (20251120115122)
