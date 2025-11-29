@@ -1,0 +1,17 @@
+name: Hello AES
+author: "[flame](https://github.com/zolbooo)"
+category: crypto
+
+description: |
+  Try out AES in CyberChef!
+
+  ```
+  Key: hellohello:);)c:
+  IV: wowwowwowwowwowwowwowwow
+  6b094953df854c716ffa742e6726487339de2e63d607d4ed82a2e351dd06
+  ```
+difficulty: easy
+value: 10
+
+flags:
+  - N1c3_pl@ying_@r0und_w1th_kn0bs
