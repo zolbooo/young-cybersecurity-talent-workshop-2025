@@ -7,7 +7,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 WORKDIR /app
 
-COPY app.py ./
+COPY app.py database.db ./
 COPY templates/ templates/
 COPY static/ static/
 
