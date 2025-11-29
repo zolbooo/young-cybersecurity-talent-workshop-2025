@@ -1,0 +1,14 @@
+name: My JWT
+author: "[flame](https://github.com/zolbooo)"
+category: web
+
+description: |
+  There is a nice playground for unsigned JWTs! Try to set user to "admin" :)
+
+difficulty: easy
+value: 50
+
+connection_info: http://flamebox.local:13305
+
+flags:
+  - flag{insecure_jwt_demo}
