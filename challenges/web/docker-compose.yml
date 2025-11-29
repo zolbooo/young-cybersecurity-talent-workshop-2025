@@ -18,7 +18,7 @@ services:
   not-an-admin:
     build: not-an-admin
     ports:
-      - "13303:5000"
+      - "13304:5000"
 networks:
   wazuh:
     name: wazuh-network
