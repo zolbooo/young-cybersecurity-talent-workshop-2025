@@ -10,7 +10,7 @@ description: |
 difficulty: easy
 value: 50
 
-connection_info: http://flamebox.local:13303
+connection_info: http://flamebox.local:13304
 
 flags:
   - flag{cUt3_p1nk_fl4g_f0r_y0u}
