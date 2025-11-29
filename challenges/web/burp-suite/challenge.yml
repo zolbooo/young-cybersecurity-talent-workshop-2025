@@ -8,6 +8,10 @@ description: |
   If there is not suitable version for your OS, go to https://portswigger.net/burp/releases/professional-community-2025-10-6
 
   Flag is the version of Burp Suite displayed on the About page for MacOS and build number for Windows.
+
+  Examples:
+  - 13337
+  - 2025.10.6 (1337133713371337)
 difficulty: easy
 value: 10
 
