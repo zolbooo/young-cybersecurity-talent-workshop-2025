@@ -6,8 +6,8 @@ description: |
   Play around with NoSQL (MongoDB) in the exquisite playground!
   You need to guess the flag though…
 
-difficulty: easy
-value: 50
+difficulty: hard
+value: 70
 
 connection_info: http://flamebox.local:13303
 
