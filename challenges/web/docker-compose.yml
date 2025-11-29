@@ -19,6 +19,10 @@ services:
     build: not-an-admin
     ports:
       - "13304:5000"
+  my-jwt:
+    build: my-jwt
+    ports:
+      - "13305:8000"
 networks:
   wazuh:
     name: wazuh-network
