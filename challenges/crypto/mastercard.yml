@@ -1,0 +1,15 @@
+name: Mastercard
+author: "[flame](https://github.com/zolbooo)"
+category: crypto
+
+description: |
+  Find a mastercard CAPK with SHA-1 of F910A1504D5FFB793D94F3B500765E1ABCAD72D9.
+
+  Flag: lower(SHA-3-224(upper(mastercard_public_key)))
+
+attempts: 5
+difficulty: medium
+value: 20
+
+flags:
+  - 9e89ef2ca4375b08fcaad7bc4eecf2de338b58ac498805e833b45998
