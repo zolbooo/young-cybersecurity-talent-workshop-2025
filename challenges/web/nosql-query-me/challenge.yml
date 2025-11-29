@@ -9,7 +9,7 @@ description: |
 difficulty: easy
 value: 50
 
-connection_info: http://flamebox.local:13302
+connection_info: http://flamebox.local:13303
 
 flags:
   - ctf{n0sql_injection_is_fun}
